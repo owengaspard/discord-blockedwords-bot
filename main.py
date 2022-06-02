@@ -26,7 +26,8 @@ blockedWords = [
     "word2"
 ]
 
-token = open("./botToken", "r").read()
+with open("./botToken", "r") as f:
+    token = f.read()
 
 @client.event
 async def on_ready():
